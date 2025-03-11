@@ -45,7 +45,7 @@ pub fn compute_log_returns(prices: &[f64]) -> Array1<f64> {
     Array1::from(returns)
 }
 
-// In data.rs
+/// Discretize returns into quantiles
 pub fn discretize_returns_quantiles(returns: &[f64], num_bins: usize) -> Vec<usize> {
     let mut sorted_returns = returns.to_vec();
     sorted_returns.sort_by(|a, b| a.partial_cmp(b).unwrap_or(std::cmp::Ordering::Equal));
