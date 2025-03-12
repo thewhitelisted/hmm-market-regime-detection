@@ -11,7 +11,6 @@ pub struct HMM {
 impl HMM {
     pub fn new(num_states: usize, num_observations: usize) -> Self {
         
-        // Initialize matrices with random values
         let transition_matrix = Array2::from_shape_vec(
             (3, 3),
             vec![
